@@ -1,0 +1,40 @@
+<div class="container section">
+
+  <div class="notification is-danger" *ngIf="Errors">
+    <button class="delete" (click)="clearErrors()"></button>
+    {{Errors}}
+  </div>
+
+  <div class="field">
+    <label class="label">Email</label>
+    <div class="control has-icons-left has-icons-right">
+      <input class="input" type="email" placeholder="Email input" [(ngModel)]="userCredintal.email" required #userEmail="ngModel">
+      <span class="icon is-small is-left">
+        <i class="fas fa-envelope"></i>
+      </span>
+    </div>
+    <p class="help is-danger" *ngIf="userEmail.errors?.required && userEmail.touched">This email is invalid</p>
+  </div>
+  <div class="field">
+    <label class="label">Password</label>
+    <div class="control has-icons-left has-icons-right">
+      <input class="input" type="password" placeholder="password input" [(ngModel)]="userCredintal.password" required
+        #userPassword="ngModel">
+      <span class="icon is-small is-left">
+        <i class="fas fa-lock"></i>
+      </span>
+    </div>
+    <p class="help is-success" *ngIf="userPassword.errors?.required && userPassword.touched">This password is uncorrect</p>
+  </div>
+  <div class="field is-grouped">
+    <div class="control">
+      <button class="button is-link" (click)="LoginFunction()">Submit</button>
+    </div>
+    <div class="control">
+      <button class="button is-link" [routerLink]="['/register']" routerLinkActive="router-link-active">SignUp</button>
+    </div>
+    <div class="control">
+      <button class="button is-text">Cancel</button>
+    </div>
+  </div>
+</div>

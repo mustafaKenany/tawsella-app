@@ -1,0 +1,66 @@
+<div class="container section">
+  <div class="field">
+    <label class="label">Name</label>
+    <div class="control">
+      <input class="input" type="text" placeholder="Text input" name="name" [(ngModel)]="userData.name">
+    </div>
+  </div>
+  <div class="field">
+    <label class="label">Email</label>
+    <div class="control has-icons-left has-icons-right">
+      <input class="input " type="email" placeholder="Email input" name="email" [(ngModel)]="userData.email">
+      <span class="
+        icon is-small is-left">
+        <i class="fas fa-envelope"></i>
+      </span>
+      <!-- <span class="icon is-small is-right">
+        <i class="fas fa-exclamation-triangle"></i>
+      </span> -->
+    </div>
+    <p class="help is-danger">This email is invalid</p>
+  </div>
+  <div class="field">
+    <label class="label">Password</label>
+    <div class="control has-icons-left has-icons-right">
+      <input class="input" type="password" placeholder="password input" name="Password" [(ngModel)]="userData.password">
+      <span class="icon is-small is-left">
+        <i class="fas fa-lock"></i>
+      </span>
+      <!-- <span class="icon is-small is-right">
+        <i class="fas fa-check"></i>
+      </span> -->
+    </div>
+    <p class="help is-success">This Password is uncorrect</p>
+  </div>
+  <div class="field">
+    <div class="control">
+      <label class="checkbox">
+        <input type="checkbox">
+        I agree to the <a href="#">terms and conditions</a>
+      </label>
+    </div>
+  </div>
+  <div class="field">
+    <div class="control">
+      <label class="radio">
+        <input type="radio" name="question">
+        Yes
+      </label>
+      <label class="radio">
+        <input type="radio" name="question">
+        No
+      </label>
+    </div>
+  </div>
+  <div class="field is-grouped">
+    <div class="control">
+      <button class="button is-link" (click)="signUpFunction()">Submit</button>
+    </div>
+    <div class="control">
+      <button class="button is-link is-info" [routerLink]="['/login']" routerLinkActive="router-link-active">login</button>
+    </div>
+    <div class="control">
+      <button class="button is-text">Cancel</button>
+    </div>
+  </div>
+</div>
