@@ -1,0 +1,46 @@
+.buttons-Selection {
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+}
+
+.buttons-Selection button {
+  width: 3.5cm;
+  height: 1.25cm;
+  font-family: 'Courier New', Courier, monospace;
+  margin: 10px;
+  font-weight: bold;
+  border: 1px solid #2C73D2;
+  background: none;
+  font-size: 15px;
+  border-radius: 3px;
+  cursor: pointer;
+  color: #2C73D2;
+}
+
+.buttons-Selection button.active {
+  background: #008E9B;
+  color: white;
+}
+
+table td,
+th {
+  text-align: center;
+  padding: 5px;
+}
+
+table button {
+  font-family: 'Courier New',
+    Courier,
+    monospace;
+  font-weight: bold;
+  border: 1px solid #2C73D2;
+  background: none;
+  font-size: 14px;
+  border-radius: 3px;
+  cursor: pointer;
+  color: #2C73D2;
+  padding: 5px;
+  width: 3cm;
+  height: 1cm;
+}

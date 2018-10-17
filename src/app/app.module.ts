@@ -14,6 +14,8 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireStorageModule } from 'angularfire2/storage';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { FormsModule } from '@angular/forms';
+import { AlreadycarsComponent } from './componets/alreadycars/alreadycars.component';
+import { PublicSectionCarsComponent } from './componets/public-section-cars/public-section-cars.component';
 
 const appRoutes: Routes = [
   {
@@ -32,6 +34,10 @@ const appRoutes: Routes = [
   {
     path: 'register',
     component: RegisterComponent
+  },
+  {
+    path: 'alreadycars',
+    component: AlreadycarsComponent
   }
 ];
 @NgModule({
@@ -40,7 +46,10 @@ const appRoutes: Routes = [
     HomeComponent,
     NavbarComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    AlreadycarsComponent,
+    PublicSectionCarsComponent,
+
   ],
   imports: [
     BrowserModule,

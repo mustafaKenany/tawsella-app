@@ -29,7 +29,7 @@ export class RegisterComponent implements OnInit {
     //     console.log(err.message);
     //     this.router.navigate(['/register']);
     //   });
-    this.authenticationService.signUpwithEmil(this.userData);
+    // this.authenticationService.signUpwithEmil(this.userData);
     console.log(this.userData);
   }
 

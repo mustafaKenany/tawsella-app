@@ -18,13 +18,14 @@
   <div class="field">
     <label class="label">Password</label>
     <div class="control has-icons-left has-icons-right">
-      <input class="input" type="password" placeholder="password input" [(ngModel)]="userCredintal.password" required
-        #userPassword="ngModel">
+      <input class="input" type="password" placeholder="password input" minlength="6" [(ngModel)]="userCredintal.password"
+        required #userPassword="ngModel">
       <span class="icon is-small is-left">
         <i class="fas fa-lock"></i>
       </span>
     </div>
-    <p class="help is-success" *ngIf="userPassword.errors?.required && userPassword.touched">This password is uncorrect</p>
+    <p class="help is-danger" *ngIf="userPassword.errors?.required && userPassword.touched">This password is uncorrect</p>
+    <p class="help is-danger" *ngIf="userPassword.errors?.minlength && userPassword.touched">This password is too short</p>
   </div>
   <div class="field is-grouped">
     <div class="control">
