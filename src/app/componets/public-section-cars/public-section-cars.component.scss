@@ -1,0 +1,120 @@
+// .content {
+//   margin: 50px 0;
+//   padding: 5px;
+//   display: flex;
+//   direction: rtl;
+//   justify-content: center;
+// }
+
+// .content .label {
+
+//   margin: 0;
+//   padding: 10px;
+// }
+
+// .content .label label {
+//   font-family: 'Courier New',
+//     Courier,
+//     monospace;
+//   font-size: 17px;
+//   color: #2C73D2;
+// }
+
+
+// .content .controls {
+//   padding: 0 5px;
+//   width: 35%;
+// }
+
+
+// .content .controls .field input {
+//   text-align: center;
+//   font-family: 'Courier New',
+//     Courier,
+//     monospace;
+//   font-size: 17px;
+//   color: #2C73D2;
+// }
+
+// .content .controls button {
+//   font-family: 'Courier New',
+//     Courier,
+//     monospace;
+//   font-size: 17px;
+//   font-weight: bold;
+
+// }
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto;
+  grid-template-areas:
+    ". search label"
+    ". button . ";
+  grid-gap: 5px;
+  padding: 10px;
+  margin-top: 50px;
+}
+
+
+.item-label {
+  grid-area: label;
+  text-align: left;
+  display: flex;
+  align-items: center;
+}
+
+.item-label h1 {
+  font-weight: bold;
+}
+
+.item-search {
+  grid-area: search;
+  text-align: right
+}
+
+.item-search input {
+  border: 1px solid #2C73D2;
+  border-radius: 2px;
+  padding: 5px;
+  width: 100%;
+  text-align: center;
+  height: 1cm;
+}
+
+.item-search input:focus {
+  border: none;
+}
+
+.item-button {
+  grid-area: button;
+  text-align: center;
+}
+
+.item-button button {
+  background: white;
+  border: 1px solid #2C73D2;
+  border-radius: 2px;
+  padding: 5px;
+  width: 50%;
+  cursor: pointer;
+  color: #2196F3
+}
+
+.item-button button:hover {
+  background: #2C73D2;
+  color: white;
+  transition: 1s;
+
+}
+
+.item-button button:active {
+  border: none;
+}
+
+table td,
+th {
+  text-align: center;
+  padding: 5px;
+}

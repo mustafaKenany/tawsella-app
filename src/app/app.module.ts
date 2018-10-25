@@ -16,6 +16,7 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { FormsModule } from '@angular/forms';
 import { AlreadycarsComponent } from './componets/alreadycars/alreadycars.component';
 import { PublicSectionCarsComponent } from './componets/public-section-cars/public-section-cars.component';
+import { RequestDriveComponent } from './componets/request-drive/request-drive.component';
 
 const appRoutes: Routes = [
   {
@@ -38,6 +39,10 @@ const appRoutes: Routes = [
   {
     path: 'alreadycars',
     component: AlreadycarsComponent
+  },
+  {
+    path: 'publicSectionPlaces',
+    component: PublicSectionCarsComponent
   }
 ];
 @NgModule({
@@ -49,6 +54,7 @@ const appRoutes: Routes = [
     RegisterComponent,
     AlreadycarsComponent,
     PublicSectionCarsComponent,
+    RequestDriveComponent,
 
   ],
   imports: [
